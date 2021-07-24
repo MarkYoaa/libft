@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/22 10:24:11 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/07/24 13:50:47 by mgelbart         ###   ########.fr       */
+/*   Created: 2021/07/11 14:31:40 by mgelbart          #+#    #+#             */
+/*   Updated: 2021/07/11 14:59:21 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "stdlib.h"
 
-/*
-**if (str1 > str2) takes care of overlapping memory blocks
-*/
-
-void	*ft_memmove(void *str1, const void *str2, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
+	size_t	j;
+	char	*sub;
 
-	if (!str1 && !str2)
+	i = 0;
+	j = 0;
+	sub = malloc(sizeof(char) * (len + 1));
+	if (!sub)
 		return (NULL);
-	if (str1 > str2)
+	while (s[i])
 	{
-		while (len > 0)
+		if (i >= start && j < len)
 		{
-			((char *)str1)[len - 1] = ((char *)str2)[len - 1];
-			len--;
+			sub[j] = s[i];
+			j++;
 		}
+		i++;
 	}
-	else
-	{
-		i = 0;
-		while (i < len)
-		{
-			((char *)str1)[i] = ((char *)str2)[i];
-			i++;
-		}
-	}
-	return (str1);
+	sub[j] = 0;
+	return (sub);
 }

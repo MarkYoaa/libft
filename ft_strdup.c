@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/21 14:49:35 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/07/24 12:39:33 by mgelbart         ###   ########.fr       */
+/*   Created: 2021/07/10 15:36:52 by mgelbart          #+#    #+#             */
+/*   Updated: 2021/07/11 13:49:18 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strdup( const char *str1)
 {
-	unsigned char	*ptr;
+	char	*dub;
 
-	ptr = (unsigned char *)s;
-	while (n--)
-		*(ptr++) = 0;
+	dub = malloc(sizeof(char) * ft_strlen(str1) + 1);
+	ft_strlcpy(dub, str1, ft_strlen(str1) + 1);
+	return (dub);
 }
 
 /*
 **#include <stdio.h>
-**#include <string.h>
-**int main () {
-**  char str[50];
-**
-**   strcpy(str,"I like turtles.");
-**   puts(str);
-**
-**   ft_bzero(str, 3);
-**   write(1, &str, 16);
-**   
-**   return(0);
+**int main()
+**{
+**	char test[] = "abcd";
+**	printf("%s", ft_strdup(test));
 **}
 */

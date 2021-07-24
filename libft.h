@@ -6,7 +6,7 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 12:46:50 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/29 16:27:13 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/08 16:58:49 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ char				*ft_strdup(const char *s);
 /*
 ** mem*.c functions
 */
-void					*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void					*ft_memchr(const void *src, int c, size_t n);
 int							ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
