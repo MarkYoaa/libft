@@ -6,7 +6,7 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 17:10:35 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/07/24 14:52:08 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:56:19 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-/*
-**#include <stdio.h>
-**
-**int    main(void)
-**{
-**    char oldstr[20] = "CopyText123";
-**    char newstr1[20];
-**    char newstr2[20];
-**
-**ft_strlcpy(&newstr1[0], &oldstr[0], 10);
-**printf("ft_strlcpy: %s \n", &newstr1[0]);
-**
-**ft_strlcpy(&newstr2[0], &oldstr[0], 10);
-**printf("strlcpy (ORIGINAL): %s \n", &newstr2[0]);
-**}
-*/

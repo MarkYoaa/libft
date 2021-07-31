@@ -6,11 +6,11 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 12:52:05 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/29 15:37:55 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:53:56 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi (const char *str)
+int	ft_atoi(const char *str)
 {
 	int	res;
 	int	i;
@@ -35,15 +35,3 @@ int	ft_atoi (const char *str)
 	}
 	return (res * sign);
 }
-
-/*
- **#include <stdio.h>
- **#include <stdlib.h>
- **#include <string.h>
- **int main(){
- **	int n = ft_atoi("-2147483648");
- **	int d = atoi("-2147483648");
- **	printf("n = %d\n", n);
- **	printf("d = %d\n", d);
- **}
-*/

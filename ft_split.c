@@ -6,7 +6,7 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 19:25:03 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/07/24 15:54:05 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/27 14:51:33 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,7 @@ static void	*write_split(char **split, char *str, char del)
 		j = 0;
 		while (char_is_delimiter(str[i + j], del) == 0)
 			j++;
-		if ((split[word] = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
-		{
-			while (word > 0)
-				free(split[--word]);
-			return (NULL);
-		}
+		split[word] = (char *)malloc(sizeof(char) * (j + 1));
 		write_word(split[word], str + i, del);
 		i += j;
 		word++;
@@ -91,7 +86,8 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	str = (char *)s;
 	words = word_count(str, c);
-	if ((res = (char **)malloc(sizeof(char *) * (words + 1))) == NULL)
+	res = (char **)malloc(sizeof(char *) * (words + 1));
+	if (res == NULL)
 		return (NULL);
 	res[words] = 0;
 	if (write_split(res, str, c) == NULL)

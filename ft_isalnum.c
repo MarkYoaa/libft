@@ -6,11 +6,11 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 11:55:06 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/21 12:15:49 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:54:19 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum (int c)
+int	ft_isalnum(int c)
 {
 	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z'))
@@ -20,13 +20,3 @@ int	ft_isalnum (int c)
 	else
 		return (0);
 }
-
-/*
-**#include <stdio.h>
-**int	main()
-**{
-**	int c;
-**	c = 'A';
-**	printf("%d", ft_isalnum(c));
-**}
-*/

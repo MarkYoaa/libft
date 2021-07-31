@@ -6,11 +6,11 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 12:38:37 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/21 12:51:08 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:54:38 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha (int c)
+int	ft_isalpha(int c)
 {
 	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 	{
@@ -19,13 +19,3 @@ int	ft_isalpha (int c)
 	else
 		return (0);
 }
-
-/*
-**#include <stdio.h>
-**int	main()
-**{
-**	int c;
-**	c = 'G';
-**	printf("%d", ft_isalpha(c));
-**}
-*/

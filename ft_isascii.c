@@ -6,11 +6,11 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 11:43:06 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/21 11:51:46 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:54:44 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii (int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c < 128)
 	{
@@ -19,13 +19,3 @@ int	ft_isascii (int c)
 	else
 		return (0);
 }
-
-/*
-**#include <stdio.h>
-**int	main()
-**{
-**	int c;
-**	c = 65;
-**	printf("%d", ft_isascii(c));
-**}
-*/

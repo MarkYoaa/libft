@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/15 18:25:00 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/07/31 11:56:15 by mgelbart         ###   ########.fr       */
+/*   Created: 2021/07/27 12:42:03 by mgelbart          #+#    #+#             */
+/*   Updated: 2021/07/31 12:30:13 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	j;
+	long	l;
 
-	i = ft_strlen(dst);
-	if (i > size)
-		return (size + ft_strlen((char *)src));
-	j = 0;
-	while (i + j < size - 1 && src[j] != '\0')
+	l = n;
+	if (l < 0)
 	{
-		dst[i + j] = src[j];
-		j++;
+		ft_putchar_fd('-', fd);
+		l *= -1;
 	}
-	dst[i + j] = '\0';
-	return (i + ft_strlen((char *)src));
+	if (l <= 9)
+		ft_putchar_fd(l + '0', fd);
+	else
+	{
+		ft_putnbr_fd(l / 10, fd);
+		ft_putnbr_fd(l % 10, fd);
+	}
 }

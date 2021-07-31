@@ -6,7 +6,7 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 10:37:36 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/29 16:49:42 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:56:55 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-
-/*
-**#include <stdio.h>
-**int	main()
-**{
-**	char c;
-**	c = 'S';
-**	printf("%c", ft_tolower(c));
-**}
-*/

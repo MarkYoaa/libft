@@ -6,11 +6,11 @@
 /*   By: mgelbart <mgelbart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 12:17:12 by mgelbart          #+#    #+#             */
-/*   Updated: 2021/06/21 12:22:37 by mgelbart         ###   ########.fr       */
+/*   Updated: 2021/07/31 11:54:52 by mgelbart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit (int c)
+int	ft_isdigit(int c)
 {
 	if (c > 47 && c < 58)
 	{
@@ -19,13 +19,3 @@ int	ft_isdigit (int c)
 	else
 		return (0);
 }
-
-/*
-**#include <stdio.h>
-**int	main()
-**{
-**	char c;
-**	c = '9';
-**	printf("%d", ft_isdigit(c));
-**}
-*/
